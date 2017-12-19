@@ -1,5 +1,3 @@
-library(chron)
-
 #download unzip data
 fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileURL, destfile = "./data.zip")
@@ -11,7 +9,6 @@ data <- read.table("./household_power_consumption.txt", sep = ";", header = TRUE
 
 #subset data 
 dataFeb <- data[data$Date == "1/2/2007" | data$Date == "2/2/2007",]
-dataFeb$Time <- chron(times = dataFeb$Time)
 
 #convert into POSIXlt
 dataFeb$Time <- paste(dataFeb$Date, dataFeb$Time)

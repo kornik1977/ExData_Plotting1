@@ -10,7 +10,7 @@ data <- read.table("./household_power_consumption.txt", sep = ";", header = TRUE
 #subset data 
 dataFeb <- data[data$Date == "1/2/2007" | data$Date == "2/2/2007",]
 
-#convert variables into Date/Time classes
+#convert into POSIXlt
 dataFeb$Time <- paste(dataFeb$Date, dataFeb$Time)
 dataFeb$Time <- strptime(dataFeb$Time, format = "%d/%m/%Y %H:%M:%S")
 Sys.setlocale("LC_TIME", "English")
