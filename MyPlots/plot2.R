@@ -20,5 +20,5 @@ par(mfcol = c(1,1))
 plot(dataFeb$Time, dataFeb$Global_active_power, type = "l", xlab = " ", ylab = "Global Active Power (kilowatts)")
 
 #copy the plot into png file
-dev.copy(png, file = "plot2.png")
+dev.copy(png, file = "plot2.png", height = 480, width = 480, units = "px")
 dev.off()

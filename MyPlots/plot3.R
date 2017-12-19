@@ -23,5 +23,5 @@ points(dataFeb$Time, dataFeb$Sub_metering_3, type = "l", col = "blue")
 legend("topright", lty = c(1,1,1), col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 #copy the plot into png file
-dev.copy(png, file = "plot3.png")
+dev.copy(png, file = "plot3.png", height = 480, width = 480, units = "px")
 dev.off()

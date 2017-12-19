@@ -26,5 +26,6 @@ with(dataFeb, plot(Time, Voltage, type = "l", xlab = "datetime"))
 with(dataFeb, plot(Time, Global_reactive_power, type = "l", xlab = "datetime"))
 
 #copy the plot into png file
-dev.copy(png, file = "plot4.png")
+dev.copy(png, file = "plot4.png", height = 480, width = 480, units = "px")
 dev.off()
+dev.set(which = 2)
